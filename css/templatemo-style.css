@@ -25,6 +25,14 @@ CSS SITEMAP >>>>
 01. GENERAL CSS
 ================================================*/
 
+
+.scrolled-down{
+  transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+  transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
 html,
 body {
   -webkit-font-smoothing: antialiased;
@@ -290,7 +298,6 @@ video {
 #fullpage {
   z-index: 99;
 }
-
 
 /*==============================================
 02. HEADER CSS
