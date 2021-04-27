@@ -51,19 +51,19 @@
                 loop: true,
                 nav: false,
                 dots: true,
-                items: 3,
+                items: 1,
                 margin: 30,
-                autoplay: false,
+                autoplay: true,
                 smartSpeed: 700,
-                autoplayTimeout: 6000,
+                autoplayTimeout: 3000,
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 0
+                        margin: 10
                     },
                     460: {
                         items: 1,
-                        margin: 0
+                        margin: 10
                     },
                     576: {
                         items: 2,
@@ -76,6 +76,25 @@
                 }
             });
         }
+        if ($('.about-pic-list').length) {
+            $('.about-pic-list').owlCarousel({
+                loop: true,
+                nav: false,
+                dots: false,
+                items: 1,
+                margin: 30,
+                autoplay: true,
+                smartSpeed: 700,
+                autoplayTimeout: 4000,
+                animateOut: 'fadeOut',
+                responsive: {
+                    0: {
+                        items: 1,
+                        margin: 10
+                    }
+                }
+            });
+        }
         if ($('.services-list').length) {
             $('.services-list').owlCarousel({
                 loop: true,
@@ -83,17 +102,17 @@
                 dots: true,
                 items: 3,
                 margin: 30,
-                autoplay: false,
+                autoplay: true,
                 smartSpeed: 700,
                 autoplayTimeout: 6000,
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 0
+                        margin: 10
                     },
                     460: {
                         items: 1,
-                        margin: 0
+                        margin: 10
                     },
                     576: {
                         items: 2,
@@ -118,7 +137,7 @@
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 0
+                        margin: 10
                     },
                     576: {
                         items: 2,
@@ -144,7 +163,7 @@
                 responsive: {
                     0: {
                         items: 1,
-                        margin: 0
+                        margin: 10
                     },
                     768: {
                         items: 1
@@ -155,7 +174,7 @@
         if ($('.fullpage-default').length) {
             var myFullpage = new fullpage('.fullpage-default', {
                 licenseKey: ' C7F41B00-5E824594-9A5EFB99-B556A3D5',
-                anchors: ['slide01', 'slide02', 'slide03', 'slide04', 'slide05'],
+                anchors: ['slide01', 'slide02', 'slide03', 'slide04', 'slide05', 'slide06'],
                 menu: '#nav',
                 lazyLoad: true,
                 navigation: true,
@@ -270,9 +289,22 @@ $(function() {
     var fbLink = 'https://www.facebook.com/ChingLungkotabekasi/';
     var ytLink = 'https://www.youtube.com/channel/UC6OTkJDeS55F0AtVRMjRLVw';
     var waLink = 'https://api.whatsapp.com/send/?phone=+6285692936644&text=halo%2C+saya+mau+panggil+atau+tanya+tentang+barongsai+ching+lung&app_absent=0';
+    var gMapsLink  = 'https://goo.gl/maps/NM7zriZaXw1hbcjF8';
+    var emailLink  = 'mailto:contact@chinglung.com';
     
     $("[title=Instagram]").attr('href', igLink);
     $("[title=Facebook]").attr('href', fbLink);
     $("[title=Youtube]").attr('href', ytLink);
     $("[title=Whatsapp]").attr('href', waLink);
+    $("[title=Gmaps]").attr('href', gMapsLink);
+    $("[title=Email]").attr('href', emailLink);
+ });
+
+var $myGroup = $('#achivementsList');
+$myGroup.on('show.bs.collapse','.collapse', function() {
+    $myGroup.find('.collapse.show').collapse('hide');
+});
+
+$(document).ready(function() {
+    $('#firstPlaceButton').click();
  });

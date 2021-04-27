@@ -48,8 +48,8 @@
 		margin-bottom:25px;
 	}
 	.service-icon {
-		width:80px;
-		height:80px;
+		width:200px;
+		height:200px;
 		line-height:80px;
 		font-size:30px;
 		margin: 0 auto;
@@ -240,9 +240,9 @@
 	.navbar-nav {
 		margin: 0;
 	}
-	.collapse:not(.show) {
+	/* .collapse:not(.show) {
 		display:none;
-	}
+	} */
 	.navigation-menu > li {
 		display: block;
 		margin: 0;

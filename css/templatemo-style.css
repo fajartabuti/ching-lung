@@ -144,6 +144,7 @@ video {
   min-width: 100%; 
   min-height: 100%;
 }
+
 #video:after {
   content: '';
   opacity: 0.75;
@@ -151,7 +152,7 @@ video {
   background: -moz-linear-gradient(top, #000000 0%, #860000 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #000000 0%,#860000 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #000000 0%,#860000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#860000',GradientType=0 ); /* IE6-9 */
   position:fixed;
   left:0;
   top:0;
@@ -184,7 +185,7 @@ video {
   border:2px solid transparent;
   border-radius: 10px;
 }
-.btn:hover, .btn:focus {
+.btn:hover, .btn:focus{
   color:#fff;
   border-color:#fff;
   background:none;
@@ -231,10 +232,10 @@ video {
   flex: 1 0 auto;
 }
 .preloader {
-  background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #4096ee 0%,#39ced6 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top, #000000 0%, #860000 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%,#860000 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%,#860000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#860000',GradientType=0 ); /* IE6-9 */
   height: 100%;
   left: 0;
   position: fixed;
@@ -297,6 +298,14 @@ video {
 
 #fullpage {
   z-index: 99;
+}
+
+footer{
+  position: absolute;
+  bottom: 0px;
+  margin-left: 25%;
+  width: 50%;
+  padding: 10px;
 }
 
 /*==============================================
@@ -362,9 +371,9 @@ a#logo {
 .navbar-nav li.active a {
   opacity: 1;
 }
-.collapse:not(.show) {
+/* .collapse:not(.show) {
   display:block;
-}
+} */
 
 /*==============================================
 03. SOCIAL ICONS CSS
@@ -776,6 +785,20 @@ textarea.form-control {
   font-size: 25px;
 }
 
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:50%;
+  position:relative;
+  height:0;
+}
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
 /*==============================================
 09. TESTIMONOALS BLOCK CSS
 ================================================*/
@@ -803,6 +826,18 @@ textarea.form-control {
 /*==============================================
 10. SKILLS BLOCK CSS
 ================================================*/
+.collapsing {
+  transition: none;
+}
+
+#achivementsList button {
+  margin: 10px;
+}
+
+#achivementsList p {
+  margin: 5px;
+}
+
 .skills-row {
   margin-top: 80px;
 }
